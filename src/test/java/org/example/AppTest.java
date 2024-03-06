@@ -4,6 +4,8 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
+import java.util.Optional;
+
 /**
  * Unit test for simple App.
  */
@@ -34,5 +36,14 @@ public class AppTest
     public void testApp()
     {
         assertTrue( true );
+    }
+
+    public void testPushAndPop() {
+        MyStack<Integer> stack = new MyStack<>();
+
+        stack.push(1);
+        assertEquals(Optional.of(1), Optional.of(stack.get(0)));
+
+        assertEquals(Optional.of(1), Optional.of(stack.pop()));
     }
 }
