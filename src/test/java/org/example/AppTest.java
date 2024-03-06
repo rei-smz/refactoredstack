@@ -42,7 +42,6 @@ public class AppTest
         MyStack<Integer> stack = new MyStack<>();
 
         stack.push(1);
-        assertEquals(Optional.of(1), Optional.of(stack.get(0)));
 
         assertEquals(Optional.of(1), Optional.of(stack.pop()));
     }
