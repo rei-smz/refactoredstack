@@ -45,4 +45,22 @@ public class AppTest
 
         assertEquals(Optional.of(1), Optional.of(stack.pop()));
     }
+
+    public void testIsEmpty() {
+        MyStack<Integer> stack = new MyStack<>();
+
+        assertTrue(stack.isEmpty());
+
+        stack.push(1);
+        assertFalse(stack.isEmpty());
+    }
+
+    public void testSize() {
+        MyStack<Integer> stack = new MyStack<>();
+
+        assertEquals(0, stack.size());
+
+        stack.push(1);
+        assertEquals(1, stack.size());
+    }
 }
